@@ -1,0 +1,71 @@
+.gridWrapper {
+    display: grid;
+    width: 100%;
+    grid-column: 1 / -1;
+    padding: 20px 100px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 300px);
+    gap: 1rem;
+    grid-template-areas: "box1 box1 box2" "box4 box3 box2" "box4 box5 box5";
+}
+
+.box {
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 15px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.box1 {
+    grid-area: box1;
+    background-image: url('../pic/restaurant.jpg');
+}
+
+.box2 {
+    grid-area: box2;
+    background-image: url("../pic/pexels-lumn-604969.jpg");
+}
+
+.box3 {
+    grid-area: box3;
+    background-image: url("../pic/lily-banse--YHSwy6uqvk-unsplash.jpg");
+}
+
+.box4 {
+    grid-area: box4;
+    background-image: url("../pic/adrien-olichon-ZgREXhl8ER0-unsplash.jpg");
+}
+
+.box5 {
+    grid-area: box5;
+    background-image: url("../pic/header1.jpg");
+}
+
+@media only screen and (max-width: 1000px) {
+    body {
+        margin: 10px;
+    }
+    h1 {
+        padding: 10px;
+        text-align: center;
+        font-size: 32px;
+    }
+    .gridWrapper {
+        padding: 10px;
+        grid-template-areas: "box1 box1 box2" "box4 box3 box3" "box5 box5 box5";
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 26px;
+    }
+    .gridWrapper {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 250px);
+        grid-template-areas: "box1 box1" "box4 box2" "box3 box3" "box5 box5";
+    }
+}

@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 80vh repeat(7, max-content);
+    grid-template-columns: repeat(6, 1fr);
+    font-size: 20px;
+}
+
+.story-title {
+    justify-content: center;
+    grid-column: 1 / -1;
+    font-size: 25px;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    color: orange;
+}
+
+.story-text {
+    overflow: hidden;
+    text-align: center;
+}
+
+.story-text:before,
+.story-text:after {
+    background-color: black;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 5%;
+}
+
+.story-text:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+
+.story-text:after {
+    left: 0.5em;
+    margin-right: -50%;
+}

@@ -1,0 +1,45 @@
+.header {
+    /* background-color: rgb(105, 104, 104); */
+    grid-column: 1 / -1;
+    background-color: #000000;
+    background-image: linear-gradient(to bottom, #4d4c4c4f, #000000), url('../pic/preparing-raw-barbeque-chicken-cooking.jpg');
+    background-size: cover;
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    grid-gap: 20px;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+}
+
+.header1 {
+    font-size: 30px;
+    color: white;
+}
+
+.header2 {
+    color: white;
+}
+
+.header-text {
+    color: orange;
+}
+
+.header-btn {
+    padding: 20px 30px;
+    border-radius: 5px;
+    background-color: orange;
+    border: 1px solid orange;
+    font-size: 14px;
+    color: white;
+    font-family: sans-serif;
+    cursor: pointer;
+    transition: all 0.4s;
+    justify-self: center;
+}
+
+.header-btn:hover {
+    background-color: white;
+    border: 1px solid orange;
+    color: orange;
+}
